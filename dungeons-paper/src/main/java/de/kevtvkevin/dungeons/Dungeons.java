@@ -7,6 +7,7 @@ public final class Dungeons extends JavaPlugin {
     @Override
     public void onEnable() {
         // Plugin startup logic
+        System.out.println("Started123");
     }
 
     @Override

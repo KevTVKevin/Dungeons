@@ -15,8 +15,8 @@ subprojects {
     apply plugin: 'java'
     apply plugin: 'maven'
 
-    group = project.group
-    version = project.version
+    group = 'de.kevtvkevin'
+    version = '0.1'
 
     sourceCompatibility = '1.8'
     targetCompatibility = '1.8'

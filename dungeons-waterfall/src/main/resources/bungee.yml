@@ -1,3 +1,3 @@
 name: Dungeons
-version: @version@
+version: ${version}
 main: de.kevtvkevin.dungeons.Dungeons

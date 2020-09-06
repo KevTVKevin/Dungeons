@@ -1,5 +1,5 @@
 name: Dungeons
-version: @version@
+version: ${version}
 main: de.kevtvkevin.dungeons.Dungeons
 api-version: 1.16
 authors: [ KevTVKevin ]
