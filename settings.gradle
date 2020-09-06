@@ -1,0 +1,3 @@
+rootProject.name = 'dungeons'
+
+include 'dungeons-common', 'dungeons-paper', 'dungeons-waterfall'

@@ -1,0 +1,31 @@
+apply plugin: 'com.github.johnrengelman.shadow'
+
+repositories {
+    maven {
+        name = 'sonatype'
+        url = 'https://oss.sonatype.org/content/groups/public/'
+    }
+    maven {
+        name = 'destroystokyo-repo'
+        url = 'https://repo.destroystokyo.com/repository/maven-public/'
+    }
+}
+
+dependencies {
+    compile project(':dungeons-common')
+    compileOnly 'io.github.waterfallmc:waterfall-api:1.16-R0.2-SNAPSHOT'
+}
+
+processResources {
+    from(sourceSets.main.resources.srcDirs) {
+        expand 'version': project.version
+    }
+}
+
+shadowJar {
+    dependencies {
+        include(dependency(':dungeons-common'))
+    }
+}
+
+tasks.build.dependsOn tasks.shadowJar

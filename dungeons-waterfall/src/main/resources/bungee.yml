@@ -1,0 +1,3 @@
+name: Dungeons
+version: @version@
+main: de.kevtvkevin.dungeons.Dungeons
