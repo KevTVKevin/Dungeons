@@ -9,11 +9,16 @@ repositories {
         name = 'sonatype'
         url = 'https://oss.sonatype.org/content/groups/public/'
     }
+    maven {
+        name = 'enginehub-maven'
+        url = 'http://maven.enginehub.org/repo/'
+    }
 }
 
 dependencies {
-    compile project(':dungeons-common')
-    compileOnly 'com.destroystokyo.paper:paper-api:1.16.2-R0.1-SNAPSHOT'
+    //compile project(':dungeons-common')
+    compile 'com.destroystokyo.paper:paper-api:1.16.2-R0.1-SNAPSHOT'
+    compile 'com.sk89q.worldedit:worldedit-bukkit:7.2.0-SNAPSHOT'
 }
 
 processResources {
@@ -22,10 +27,10 @@ processResources {
     }
 }
 
-shadowJar {
+/*shadowJar {
     dependencies {
         include(dependency(':dungeons-common'))
     }
-}
+}*/
 
 tasks.build.dependsOn tasks.shadowJar
