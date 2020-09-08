@@ -4,8 +4,12 @@ main: de.kevtvkevin.dungeons.Dungeons
 api-version: 1.16
 authors: [ KevTVKevin ]
 website: https://github.com/KevTVKevin
+depends: [WorldEdit]
 
 commands:
   register:
     description: register a schematic
     usage: /register <pos1, pos2, save>
+  generate:
+    description: generates a schematic
+    usage: /generate <name>

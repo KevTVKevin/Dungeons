@@ -1,5 +1,6 @@
 package de.kevtvkevin.dungeons;
 
+import de.kevtvkevin.dungeons.commands.GenerateDungeonCommand;
 import de.kevtvkevin.dungeons.commands.RegisterDungeonCommand;
 import de.kevtvkevin.dungeons.configs.DungeonConfigs;
 import de.kevtvkevin.dungeons.helper.LoadSchematics;
@@ -28,6 +29,7 @@ public final class Dungeons extends JavaPlugin {
 
     private void registerCommands() {
         this.getCommand("register").setExecutor(new RegisterDungeonCommand());
+        this.getCommand("generate").setExecutor(new GenerateDungeonCommand());
     }
 
     private void createConfigs() {
